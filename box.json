@@ -1,0 +1,15 @@
+{
+    "dependencies":{
+        "fw1":"^4.1.0",
+        "testbox":"^2.5.0+107",
+        "docbox":"^2.0.7+00005"
+    },
+    "installPaths":{
+        "fw1":"lib/framework",
+        "testbox":"lib/testbox",
+        "docbox":"lib/docbox"
+    },
+    "testbox":{
+        "runner":"http://127.0.0.1:65185/testbox/test-harness/runner.cfm"
+    }
+}
