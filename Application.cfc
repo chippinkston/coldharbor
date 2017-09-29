@@ -12,7 +12,7 @@ component extends="lib.framework.one" output="false" {
 		generateSES = false,
 		SESOmitIndex = false,
 		diEngine = "di1",
-		diComponent = "framework.ioc",
+		diComponent = "lib.framework.ioc",
 		diLocations = "model, controllers",
         diConfig = { },
         routes = [ ]
@@ -30,7 +30,17 @@ component extends="lib.framework.one" output="false" {
 
 	public void function setupResponse() {  }
 
-	private void function reloadApplication(){
+	public void function onError( any exception, string event ){
+		dump(this);
+		dump(this.getDefaultBeanFactory().getBeanInfo());
+		dump(variables.framework);
+		dump(exception);
+		dump(event);
+		abort;
+
+	}
+
+	public void function reloadApplication(){
 		onApplicationStart();
 	}
 
